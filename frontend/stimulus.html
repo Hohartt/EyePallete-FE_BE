@@ -17,6 +17,7 @@
         <div class="header">
           <img class="logo" src="./img/logo.png" alt="logo" />
         </div>
+        <div class="mid-wrapper">
         <div class="pallete-wrapper">
           <div class="red"><p>13HZ</p></div>
           <div class="plus-box">
@@ -40,6 +41,7 @@
             </div>
           </div>
         </div>
+       </div>
       </div>
 
       <div class="alert-background">
@@ -51,32 +53,32 @@
 
       <div class="alert-first-background">
         <p>
-          첫번째로 고를 색을 30초간<br />
-          눈으로 집중해서 봐주세요😊
+          첫번째 영역에 색칠하고자 하는 색을<br />
+          30초간 응시해주세요😊
         </p>
         <img src="./img/plus_2.png"/>
       </div>
 
       <div class="alert-second-background">
         <p>
-          두번째로 고를 색을 30초간 <br />
-          눈으로 집중해서 봐주세요😊
+          두번째 영역에 색칠하고자 하는 색을<br />
+          30초간 응시해주세요😊
         </p>
         <img src="./img/plus_2.png"/>
       </div>
 
       <div class="alert-third-background">
         <p>
-          세번째로 고를 색을 30초간 <br />
-          눈으로 집중해서 봐주세요😊
+          세번째 영역에 색칠하고자 하는 색을<br />
+          30초간 응시해주세요😊
         </p>
         <img src="./img/plus_2.png"/>
       </div>
 
       <div class="alert-fourth-background">
         <p>
-          네번째로 고를 색을 30초간 <br />
-          눈으로 집중해서 봐주세요😊
+          네번째 영역에 색칠하고자 하는 색을<br />
+          30초간 응시해주세요😊
         </p>
         <img src="./img/plus_2.png"/>
       </div>
@@ -91,7 +93,7 @@
 
     <script>
 
-      // 중립 알림 시작
+      // 중립 알림 시작 (50초 동안)
       setTimeout(() => {
         window.scrollTo(0, 0);
         $('.stimulus-wrapper').css({ display: 'none' });
@@ -102,58 +104,118 @@
         $('.alert-final-background').css({ display: 'none' });
       }, 0);
 
-      // 중립 시작 (3초)
+      // 첫번째 영역 알림 (50초 이후 10초 동안)
       setTimeout(() => {
-        $('.stimulus-wrapper').css({ display: 'block' });
         $('.alert-background').css({ display: 'none' });
-        window.scrollTo(0, 0);
-      }, 3000);
-
-      // 첫번째 알림 (1분 3초)
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        $('.stimulus-wrapper').css({ display: 'none' });
         $('.alert-first-background').css({ display: 'block' });
-      }, 63000);
+        window.scrollTo(0, 0);
+      }, 50000);
 
-      // 첫번째 시작 (1분 6초)
+      // 첫번째 주파수 측정 (30초 동안)
       setTimeout(() => {
         window.scrollTo(0, 0);
-        $('.alert-first-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
-      }, 66000);
+        $('.alert-first-background').css({ display: 'none' });
+        $('.circle-part-1').css({border : '1px solid black'});
+      }, 60000);
 
-      // 두번째 알림 (1분 36초)
+      // 두번째 알림 (10초동안)
       setTimeout(() => {
         $.ajax({
             type: 'GET',
             url: 'http://127.0.0.1:5000/first'
         })
         .then((res)=> console.log(res))
-        .catch((e)=> console.log(e));
+        .catch((e)=> {
+          $('.circle-part-1').css({backgroundColor : 'red'});
+        });
         window.scrollTo(0, 0);
         $('.alert-second-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
-      }, 96000);
+        $('.draw-circle-wrapper').css({transform : 'rotate(-45deg)'});
+      }, 90000);
 
-      // 두번째 시작 (1분 39초)
+      // 두번째 주파수 측정(30초동안)
       setTimeout(() => {
         window.scrollTo(0, 0);
         $('.alert-second-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
-      }, 99000);
+        $('.circle-part-2').css({border : '1px solid black'});
+      }, 100000);
 
+      // 세번째 알림
       setTimeout(() => {
         $.ajax({
             type: 'GET',
             url: 'http://127.0.0.1:5000/second'
         })
         .then((res)=> console.log(res))
-        .catch((e)=> console.log(e));
+        .catch((e)=> {
+          $('.circle-part-2').css({backgroundColor : 'blue'});
+        });
         window.scrollTo(0, 0);
-        $('.alert-final-background').css({ display: 'block' });
+        $('.alert-third-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
-      }, 129000);
+        $('.draw-circle-wrapper').css({transform : 'rotate(-135deg)'});
+      }, 130000);
+
+      // 세번째 주파수 측정
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.alert-third-background').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'block' });
+        $('.circle-part-3').css({border : '1px solid black'});
+      }, 140000);
+
+      // 네번째 알림
+      setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/third'
+        })
+        .then((res)=> console.log(res))
+        .catch((e)=> {
+          $('.circle-part-3').css({backgroundColor : 'green'});
+        });
+        window.scrollTo(0, 0);
+        $('.alert-fourth-background').css({ display: 'block' });
+        $('.stimulus-wrapper').css({ display: 'none' });
+        $('.draw-circle-wrapper').css({transform : 'rotate(-225deg)'});
+      }, 170000);
+
+       // 네번째 주파수 측정
+       setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.alert-fourth-background').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'block' });
+        $('.circle-part-4').css({border : '1px solid black'});
+      }, 180000);
+
+       // 종료
+       setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/fourth'
+        })
+        .then((res)=> console.log(res))
+        .catch((e)=> {
+          $('.circle-part-4').css({backgroundColor : 'blue'});
+        });
+        window.scrollTo(0, 0);
+        $('.alert-fourth-background').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'none' });
+        $('.alert-final-background').css({ display: 'block' });
+        $('.draw-circle-wrapper').css({transform : 'rotate(-315deg)'});
+        $('.draw-circle-wrapper').css({transform : 'rotate(-315deg)'});
+      }, 210000);
+
+      // 종료 후 결과물 보여주기
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.pallete-wrapper').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'block' });
+        $('.alert-final-background').css({ display: 'none' });
+      }, 215000);
     </script>
   </body>
 </html>
