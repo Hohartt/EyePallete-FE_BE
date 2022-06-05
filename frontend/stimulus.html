@@ -9,28 +9,44 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="./stimulus.js"></script>
   </head>
   <body>
     <div class="all-wrapper">
       <div class="stimulus-wrapper">
         <div class="header">
           <img class="logo" src="./img/logo.png" alt="logo" />
-          <div id="demo"></div>
         </div>
         <div class="pallete-wrapper">
-          <div class="red">13HZ</div>
+          <div class="red"><p>13HZ</p></div>
           <div class="plus-box">
             <img src="./img/plus_2.png" width="100rem" />
           </div>
-          <div class="blue">17HZ</div>
+          <div class="green"><p>19HZ</p></div>
+          <div class="plus-box">
+            <img src="./img/plus_2.png" width="100rem" />
+          </div>
+          <div class="blue"><p>23HZ</p></div>
+        </div> 
+        <div class="draw-area">
+          <div class="draw-circle-wrapper">
+            <div class="first-line">
+              <div class="circle-part-1">1번 영역</div>
+              <div class="circle-part-2">2번 영역</div>
+            </div>
+            <div class="second-line">
+              <div class="circle-part-4">4번 영역</div>
+              <div class="circle-part-3">3번 영역</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="alert-background">
         <p>
-          측정이 시작되면 약 1분 간<br />
-          가운데 (+) 에 집중해 주세요😊
+          아이팔레트 실행 중...
         </p>
+        <img src="./img/plus_2.png"/>
       </div>
 
       <div class="alert-first-background">
@@ -38,6 +54,7 @@
           첫번째로 고를 색을 30초간<br />
           눈으로 집중해서 봐주세요😊
         </p>
+        <img src="./img/plus_2.png"/>
       </div>
 
       <div class="alert-second-background">
@@ -45,6 +62,23 @@
           두번째로 고를 색을 30초간 <br />
           눈으로 집중해서 봐주세요😊
         </p>
+        <img src="./img/plus_2.png"/>
+      </div>
+
+      <div class="alert-third-background">
+        <p>
+          세번째로 고를 색을 30초간 <br />
+          눈으로 집중해서 봐주세요😊
+        </p>
+        <img src="./img/plus_2.png"/>
+      </div>
+
+      <div class="alert-fourth-background">
+        <p>
+          네번째로 고를 색을 30초간 <br />
+          눈으로 집중해서 봐주세요😊
+        </p>
+        <img src="./img/plus_2.png"/>
       </div>
 
       <div class="alert-final-background">
@@ -56,22 +90,6 @@
     </div>
 
     <script>
-      var time ;
-      //setInterval(함수, 시간) : 주기적인 실행
-      var x = setInterval(function () {
-        //parseInt() : 정수를 반환
-        min = parseInt(time / 60); //몫을 계산
-        sec = time % 60; //나머지를 계산
-
-        document.getElementById('demo').innerHTML = min + '분 ' + sec + '초';
-        time--;
-
-        //타임아웃 시
-        if (time < 0) {
-          clearInterval(x); //setInterval() 실행을 끝냄
-          document.getElementById('demo').innerHTML = '시간초과';
-        }
-      }, 1000);
 
       // 중립 알림 시작
       setTimeout(() => {
@@ -79,12 +97,13 @@
         $('.stimulus-wrapper').css({ display: 'none' });
         $('.alert-first-background').css({ display: 'none' });
         $('.alert-second-background').css({ display: 'none' });
+        $('.alert-third-background').css({ display: 'none' });
+        $('.alert-fourth-background').css({ display: 'none' });
         $('.alert-final-background').css({ display: 'none' });
       }, 0);
 
       // 중립 시작 (3초)
       setTimeout(() => {
-        time = 60;
         $('.stimulus-wrapper').css({ display: 'block' });
         $('.alert-background').css({ display: 'none' });
         window.scrollTo(0, 0);
@@ -93,7 +112,6 @@
       // 첫번째 알림 (1분 3초)
       setTimeout(() => {
         window.scrollTo(0, 0);
-        time=5;
         $('.stimulus-wrapper').css({ display: 'none' });
         $('.alert-first-background').css({ display: 'block' });
       }, 63000);
@@ -101,15 +119,19 @@
       // 첫번째 시작 (1분 6초)
       setTimeout(() => {
         window.scrollTo(0, 0);
-        time = 30;
         $('.alert-first-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
       }, 66000);
 
       // 두번째 알림 (1분 36초)
       setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/first'
+        })
+        .then((res)=> console.log(res))
+        .catch((e)=> console.log(e));
         window.scrollTo(0, 0);
-        time=5;
         $('.alert-second-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
       }, 96000);
@@ -117,12 +139,17 @@
       // 두번째 시작 (1분 39초)
       setTimeout(() => {
         window.scrollTo(0, 0);
-        time = 30;
         $('.alert-second-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
       }, 99000);
 
       setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/second'
+        })
+        .then((res)=> console.log(res))
+        .catch((e)=> console.log(e));
         window.scrollTo(0, 0);
         $('.alert-final-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
