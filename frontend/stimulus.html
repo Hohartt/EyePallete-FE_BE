@@ -32,12 +32,12 @@
         <div class="draw-area">
           <div class="draw-circle-wrapper">
             <div class="first-line">
-              <div class="circle-part-1">1번 영역</div>
-              <div class="circle-part-2">2번 영역</div>
+              <div class="circle-part-1"></div>
+              <div class="circle-part-2"></div>
             </div>
             <div class="second-line">
-              <div class="circle-part-4">4번 영역</div>
-              <div class="circle-part-3">3번 영역</div>
+              <div class="circle-part-4"></div>
+              <div class="circle-part-3"></div>
             </div>
           </div>
         </div>
@@ -45,50 +45,61 @@
       </div>
 
       <div class="alert-background">
-        <p>
-          아이팔레트 실행 중...
-        </p>
-        <img src="./img/plus_2.png"/>
+        <div>
+          <p>
+            아이팔레트 실행 중...
+          </p>
+          <img src="./img/plus_2.png"/>
+        </div>
       </div>
 
       <div class="alert-first-background">
-        <p>
-          첫번째 영역에 색칠하고자 하는 색을<br />
-          30초간 응시해주세요😊
-        </p>
-        <img src="./img/plus_2.png"/>
+        <div>
+          <p>
+            첫번째 영역에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/plus_2.png"/>
+        </div>
       </div>
 
       <div class="alert-second-background">
-        <p>
-          두번째 영역에 색칠하고자 하는 색을<br />
-          30초간 응시해주세요😊
-        </p>
-        <img src="./img/plus_2.png"/>
+        <div>
+          <p>
+            두번째 영역에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/plus_2.png"/>
+        </div>
       </div>
 
       <div class="alert-third-background">
-        <p>
-          세번째 영역에 색칠하고자 하는 색을<br />
-          30초간 응시해주세요😊
-        </p>
-        <img src="./img/plus_2.png"/>
+        <div>
+          <p>
+            세번째 영역에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/plus_2.png"/>
+        </div>
       </div>
 
       <div class="alert-fourth-background">
-        <p>
-          네번째 영역에 색칠하고자 하는 색을<br />
-          30초간 응시해주세요😊
-        </p>
-        <img src="./img/plus_2.png"/>
+        <div>
+          <p>
+            네번째 영역에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/plus_2.png"/>
+        </div>
       </div>
 
       <div class="alert-final-background">
-        <p>
-          측정이 완료되었습니다. </br>
-          본인의 그림을 확인해보세요😊
-        </p>
-      </div>
+        <div>
+          <p>
+            측정이 완료되었습니다. </br>
+            본인의 그림을 확인해보세요😊
+          </p>
+        </div>
     </div>
 
     <script>
@@ -115,6 +126,12 @@
 
       // 첫번째 영역 알림 (50초 이후 10초 동안)
       setTimeout(() => {
+        $.ajax({
+          type: 'GET',
+          url: 'http://127.0.0.1:5000/mid_average'
+        })
+                .then((res)=> console.log(res))
+                .catch((e)=> {});
         $('.alert-background').css({ display: 'none' });
         $('.alert-first-background').css({ display: 'block' });
         window.scrollTo(0, 0);
@@ -226,6 +243,7 @@
         $('.alert-final-background').css({ display: 'none' });
         $('.mid-wrapper').css({backgroundImage : 'none'});
       }, 215000);
+      // 215000
     </script>
   </body>
 </html>
