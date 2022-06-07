@@ -189,12 +189,6 @@
 .alert-background img {
   width: 30rem;
   height: 30rem;
-  -webkit-animation-name: plus;
-          animation-name: plus;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
 }
 
 .alert-first-background {
@@ -216,12 +210,6 @@
 .alert-first-background img {
   width: 30rem;
   height: 30rem;
-  -webkit-animation-name: plus;
-          animation-name: plus;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
 }
 
 .alert-second-background {
@@ -241,12 +229,6 @@
 .alert-second-background img {
   width: 30rem;
   height: 30rem;
-  -webkit-animation-name: plus;
-          animation-name: plus;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
 }
 
 .alert-third-background {

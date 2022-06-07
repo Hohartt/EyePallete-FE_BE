@@ -36,6 +36,7 @@ def main():
             else:
                 delay_time = 0. # reset delay time
                 print(line)  # already has newline
+            return { 'line' : line }
 
 @app.route('/first')
 def first_request():

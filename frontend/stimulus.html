@@ -104,6 +104,15 @@
         $('.alert-final-background').css({ display: 'none' });
       }, 0);
 
+      setTimeout(()=>{
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/'
+        })
+        .then((res)=> console.log(res))
+        .catch((e)=> {});
+      }, 5000);
+
       // 첫번째 영역 알림 (50초 이후 10초 동안)
       setTimeout(() => {
         $('.alert-background').css({ display: 'none' });
@@ -215,6 +224,7 @@
         $('.pallete-wrapper').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
         $('.alert-final-background').css({ display: 'none' });
+        $('.mid-wrapper').css({backgroundImage : 'none'});
       }, 215000);
     </script>
   </body>
