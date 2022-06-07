@@ -1,4 +1,3 @@
-import numbers
 from flask import Flask, Response
 from flask_cors import CORS
 import datetime
@@ -15,20 +14,6 @@ all_lines = [] # 2차원 배열 선언
 # 영역별 배열 얼마나 썼는지 자름
 arr_cutting = 0
 
-# 13,19,23 hz 중립평균
-avg_13hz = 0.0
-avg19hz = 0.0 
-avg23hz = 0.0
-
-# 13, 19, 23 index
-idx_13hz = 0
-idx_19hz = 0
-idx_23hz = 0
-
-# 13, 19, 23 sum
-sum_13hz = 0.0 
-sum_19hz = 0.0
-sum_23hz = 0.0
 
 
 # 여기서 메모장 로드
@@ -61,6 +46,20 @@ def main():
 
 @app.route('/mid_average')
 def mid_request():
+    # 13,19,23 hz 중립평균
+    avg_13hz = 0.0000000000
+    avg_19hz = 0.0000000000
+    avg_23hz = 0.0000000000
+
+    # 13, 19, 23 index
+    idx_13hz = 0
+    idx_19hz = 0
+    idx_23hz = 0
+
+    # 13, 19, 23 sum
+    sum_13hz = 0.0000000000
+    sum_19hz = 0.0000000000
+    sum_23hz = 0.0000000000
     for i in range(3841):
         if all_lines[0][i] == '13.00Hz':
             idx_13hz = i
@@ -69,20 +68,20 @@ def mid_request():
         if all_lines[0][i] == '23.00Hz':
             idx_23hz = i
             break
-    # for i in range(1, len(all_lines)):
-    #     sum_13hz += float(all_lines[i][idx_13hz])
-    #     sum_19hz += float(all_lines[i][idx_19hz])
-    #     sum_23hz += float(all_lines[i][idx_23hz])
+    for i in range(27,40):
+        sum_13hz += float(all_lines[i][idx_13hz])
+        sum_19hz += float(all_lines[i][idx_19hz])
+        sum_23hz += float(all_lines[i][idx_23hz])
     
-    # avg_13hz = sum_13hz / len(all_lines)
-    # avg_19hz = sum_19hz / len(all_lines)
-    # avg_23hz = sum_23hz / len(all_lines)
-    # print(avg_13hz, avg_19hz, avg_23hz)
+    avg_13hz = sum_13hz / 14.00000000000
+    avg_19hz = sum_19hz / 14.00000000000
+    avg_23hz = sum_23hz / 14.00000000000
+    print(avg_13hz, avg_19hz, avg_23hz)
 
     return {"result" : {
-        # '13hz 중립' : avg_13hz,
-        # '19hz 중립' : avg_19hz,
-        # '23hz 중립' : avg_23hz,
+        '13hz 중립' : avg_13hz,
+        '19hz 중립' : avg_19hz,
+        '23hz 중립' : avg_23hz,
         '13hz idx' : idx_13hz, 
         '19hz idx' : idx_19hz, 
         '23hz idx' : idx_23hz, 
