@@ -15,8 +15,6 @@
     }
   }
   .mid-wrapper {
-    background-image: url('../img/sketch-4.jpeg');
-    background-size: cover;
     .pallete-wrapper {
       padding: 4rem 4rem 0 11rem;
       height: 30rem;
@@ -37,7 +35,7 @@
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0769230769230769s;
-        border-radius: 100000px;
+        // border-radius: 100000px;
         color: white;
         @extend %flex;
       }
@@ -48,7 +46,7 @@
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0526315789473684s;
-        border-radius: 1000000px;
+        // border-radius: 1000000px;
         @extend %flex;
         color: white;
       }
@@ -58,11 +56,17 @@
         width: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
-        animation-duration: 0.0434782608695652s;
-        border-radius: 1000000px;
+        animation-duration: 0.032258064516129s;
+        // border-radius: 1000000px;
         @extend %flex;
         color: white;
       }
+    }
+    .spring {
+      display: block;
+      width: 100%;
+      // height : 1rem;
+      margin: auto;
     }
     .draw-area {
       width: 100%;

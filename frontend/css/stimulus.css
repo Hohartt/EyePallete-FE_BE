@@ -25,11 +25,6 @@
   display: block;
 }
 
-.stimulus-wrapper .mid-wrapper {
-  background-image: url("../img/sketch-4.jpeg");
-  background-size: cover;
-}
-
 .stimulus-wrapper .mid-wrapper .pallete-wrapper {
   padding: 4rem 4rem 0 11rem;
   height: 30rem;
@@ -66,7 +61,6 @@
           animation-iteration-count: infinite;
   -webkit-animation-duration: 0.0769230769230769s;
           animation-duration: 0.0769230769230769s;
-  border-radius: 100000px;
   color: white;
 }
 
@@ -79,7 +73,6 @@
           animation-iteration-count: infinite;
   -webkit-animation-duration: 0.0526315789473684s;
           animation-duration: 0.0526315789473684s;
-  border-radius: 1000000px;
   color: white;
 }
 
@@ -90,10 +83,15 @@
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 0.0434782608695652s;
-          animation-duration: 0.0434782608695652s;
-  border-radius: 1000000px;
+  -webkit-animation-duration: 0.032258064516129s;
+          animation-duration: 0.032258064516129s;
   color: white;
+}
+
+.stimulus-wrapper .mid-wrapper .spring {
+  display: block;
+  width: 100%;
+  margin: auto;
 }
 
 .stimulus-wrapper .mid-wrapper .draw-area {
