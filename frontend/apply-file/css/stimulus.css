@@ -59,8 +59,8 @@
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 0.0769230769230769s;
-          animation-duration: 0.0769230769230769s;
+  -webkit-animation-duration: 0.1428571428571429s;
+          animation-duration: 0.1428571428571429s;
   color: white;
 }
 
@@ -72,8 +72,8 @@
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 0.0526315789473684s;
-          animation-duration: 0.0526315789473684s;
+  -webkit-animation-duration: 0.0769230769230769s;
+          animation-duration: 0.0769230769230769s;
   color: white;
 }
 
@@ -85,8 +85,8 @@
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 0.032258064516129s;
-          animation-duration: 0.032258064516129s;
+  -webkit-animation-duration: 0.0526315789473684s;
+          animation-duration: 0.0526315789473684s;
   color: white;
 }
 
@@ -127,8 +127,7 @@
 }
 
 .alert-background img {
-  width: 30rem;
-  height: 30rem;
+  width: 50rem;
 }
 
 .alert-first-background {
@@ -148,8 +147,9 @@
 }
 
 .alert-first-background img {
-  width: 30rem;
-  height: 30rem;
+  display: block;
+  margin: auto;
+  width: 50rem;
 }
 
 .alert-second-background {
@@ -167,8 +167,9 @@
 }
 
 .alert-second-background img {
-  width: 30rem;
-  height: 30rem;
+  display: block;
+  margin: auto;
+  width: 50rem;
 }
 
 .alert-third-background {
@@ -186,39 +187,9 @@
 }
 
 .alert-third-background img {
+  display: block;
+  margin: auto;
   width: 30rem;
-  height: 30rem;
-  -webkit-animation-name: plus;
-          animation-name: plus;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.alert-fourth-background {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  padding-top: 400px;
-  font-size: 5rem;
-  text-align: center;
-}
-
-.alert-fourth-background p {
-  line-height: 200px;
-}
-
-.alert-fourth-background img {
-  width: 30rem;
-  height: 30rem;
-  -webkit-animation-name: plus;
-          animation-name: plus;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
 }
 
 .alert-final-background {

@@ -29,37 +29,37 @@
         }
       }
       .red {
-        // 13Hz
+        // 7
         background: red;
         width: 30rem;
         height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
-        animation-duration: 0.0769230769230769s;
+        animation-duration: 0.1428571428571429s;
         // border-radius: 100000px;
         color: white;
         @extend %flex;
       }
       .green {
-        // 19Hz
+        // 13
         background: green;
         width: 30rem;
         height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
-        animation-duration: 0.0526315789473684s;
+        animation-duration: 0.0769230769230769s;
         // border-radius: 1000000px;
         @extend %flex;
         color: white;
       }
       .blue {
-        // 23Hz
+        // 19
         background: blue;
         width: 30rem;
         height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
-        animation-duration: 0.032258064516129s;
+        animation-duration: 0.0526315789473684s;
         @extend %flex;
         color: white;
       }
@@ -71,7 +71,7 @@
       opacity: 1;
     }
     .draw-area {
-      margin-top : 5rem; 
+      margin-top: 5rem;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -94,11 +94,7 @@
     line-height: 200px;
   }
   img {
-    width: 30rem;
-    height: 30rem;
-    // animation-name: plus;
-    // animation-iteration-count: infinite;
-    // animation-duration: 1s;
+    width: 50rem;
   }
 }
 
@@ -116,11 +112,9 @@
     line-height: 200px;
   }
   img {
-    width: 30rem;
-    height: 30rem;
-    // animation-name: plus;
-    // animation-iteration-count: infinite;
-    // animation-duration: 1s;
+    display: block;
+    margin: auto;
+    width: 50rem;
   }
 }
 
@@ -136,11 +130,9 @@
     line-height: 200px;
   }
   img {
-    width: 30rem;
-    height: 30rem;
-    // animation-name: plus;
-    // animation-iteration-count: infinite;
-    // animation-duration: 1s;
+    display: block;
+    margin: auto;
+    width: 50rem;
   }
 }
 
@@ -156,31 +148,9 @@
     line-height: 200px;
   }
   img {
+    display: block;
+    margin: auto;
     width: 30rem;
-    height: 30rem;
-    animation-name: plus;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-  }
-}
-
-.alert-fourth-background {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  padding-top: 400px;
-  font-size: 5rem;
-  text-align: center;
-  p {
-    line-height: 200px;
-  }
-  img {
-    width: 30rem;
-    height: 30rem;
-    animation-name: plus;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
   }
 }
 

@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7330205a-1e0d-444a-80c0-01966aa954e8" name="Default Changelist" comment="">
+    <list default="true" id="68b62972-b6c7-4e97-b159-8483664a4328" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stimulus.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stimulus.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stimulus.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/stimulus.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stimulus.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/stimulus.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stimulus.html" beforeDir="false" afterPath="$PROJECT_DIR$/stimulus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stimulus.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stimulus.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stimulus.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Sketch-4.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-1/1-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-1/1-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-1/1-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-blue-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-blue-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-blue-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-green-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-green-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-green-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-red-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-red-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-2/2-red-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-blue-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-blue-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-blue-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-green-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-green-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-green-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-red-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-red-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-blue-red-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-blue-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-blue-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-blue-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-green-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-green-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-red-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-red-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-green-red-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-blue-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-blue-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-blue-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-green-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-green-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-green-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-red-blue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-red-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/area-3/3-red-red-red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/first-result-car-sketch.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/first-result.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/plus_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/result-car.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sketch-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sketch-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sketch-4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/spring-result-2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stimulus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stimulus.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +69,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2ANCrwRaXiBhYxCN8OX5AVn0TnQ" />
+  <component name="ProjectId" id="2ANq9oBxpfS2c5iu1glffRMt3Qu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,18 +79,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7330205a-1e0d-444a-80c0-01966aa954e8" name="Default Changelist" comment="" />
-      <created>1654840858121</created>
+      <changelist id="68b62972-b6c7-4e97-b159-8483664a4328" name="Default Changelist" comment="" />
+      <created>1654860244645</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654840858121</updated>
-      <workItem from="1654840859702" duration="1744000" />
+      <updated>1654860244645</updated>
+      <workItem from="1654860246376" duration="667000" />
     </task>
     <servers />
   </component>
