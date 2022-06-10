@@ -109,8 +109,8 @@ def mid_request_0():
     print('end',end,sum_19hz,end-start)
     return {"result": {
         '7Hz 중립평균': m_avg_7hz, 
-        '9Hz 중립평균': m_avg_13hz,
-        '13Hz 중립평균' : m_avg_19hz,
+        '13Hz 중립평균': m_avg_13hz,
+        '19Hz 중립평균' : m_avg_19hz,
     }}
 
 @app.route('/first')
