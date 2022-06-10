@@ -29,18 +29,9 @@
           </div>
           <div class="blue"><p>31HZ</p></div>
         </div> 
-        <img class="spring" src="./img/Sketch-4.PNG" alt="용수철" />
+        <img class="spring" src="./img/spring-result-2.PNG" alt="용수철" />
         <div class="draw-area">
-          <div class="draw-circle-wrapper">
-            <div class="first-line">
-              <div class="circle-part-1"></div>
-              <div class="circle-part-2"></div>
-            </div>
-            <div class="second-line">
-              <div class="circle-part-4"></div>
-              <div class="circle-part-3"></div>
-            </div>
-          </div>
+          <img class="result-img" src="./img/first-result-car-sketch.PNG" alt="결과"/>
         </div>
        </div>
       </div>
@@ -84,16 +75,6 @@
         </div>
       </div>
 
-      <div class="alert-fourth-background">
-        <div>
-          <p>
-            네번째 영역에 색칠하고자 하는 색을<br />
-            30초간 응시해주세요😊
-          </p>
-          <img src="./img/plus_2.png"/>
-        </div>
-      </div>
-
       <div class="alert-final-background">
         <div>
           <p>
@@ -104,7 +85,6 @@
     </div>
 
     <script>
-
       // 중립 알림 시작 (50초 동안)
       setTimeout(() => {
         window.scrollTo(0, 0);
@@ -112,7 +92,6 @@
         $('.alert-first-background').css({ display: 'none' });
         $('.alert-second-background').css({ display: 'none' });
         $('.alert-third-background').css({ display: 'none' });
-        $('.alert-fourth-background').css({ display: 'none' });
         $('.alert-final-background').css({ display: 'none' });
       }, 0);
 
@@ -143,9 +122,8 @@
         window.scrollTo(0, 0);
         $('.stimulus-wrapper').css({ display: 'block' });
         $('.alert-first-background').css({ display: 'none' });
-        $('.circle-part-1').css({border : '1px solid black'});
-      }, 60000);
-
+      }, 0);
+      // 60000
       // 두번째 알림 (10초동안)
       setTimeout(() => {
         $.ajax({
@@ -154,12 +132,10 @@
         })
         .then((res)=> console.log(res))
         .catch((e)=> {
-          $('.circle-part-1').css({backgroundColor : 'red'});
         });
         window.scrollTo(0, 0);
         $('.alert-second-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
-        $('.draw-circle-wrapper').css({transform : 'rotate(-45deg)'});
       }, 90000);
 
       // 두번째 주파수 측정(30초동안)
@@ -167,7 +143,6 @@
         window.scrollTo(0, 0);
         $('.alert-second-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
-        $('.circle-part-2').css({border : '1px solid black'});
       }, 100000);
 
       // 세번째 알림
@@ -178,12 +153,10 @@
         })
         .then((res)=> console.log(res))
         .catch((e)=> {
-          $('.circle-part-2').css({backgroundColor : 'blue'});
         });
         window.scrollTo(0, 0);
         $('.alert-third-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
-        $('.draw-circle-wrapper').css({transform : 'rotate(-135deg)'});
       }, 130000);
 
       // 세번째 주파수 측정
@@ -191,7 +164,6 @@
         window.scrollTo(0, 0);
         $('.alert-third-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
-        $('.circle-part-3').css({border : '1px solid black'});
       }, 140000);
 
       // 네번째 알림
@@ -202,49 +174,18 @@
         })
         .then((res)=> console.log(res))
         .catch((e)=> {
-          $('.circle-part-3').css({backgroundColor : 'green'});
         });
         window.scrollTo(0, 0);
-        $('.alert-fourth-background').css({ display: 'block' });
-        $('.stimulus-wrapper').css({ display: 'none' });
-        $('.draw-circle-wrapper').css({transform : 'rotate(-225deg)'});
-      }, 170000);
-
-       // 네번째 주파수 측정
-       setTimeout(() => {
-        window.scrollTo(0, 0);
-        $('.alert-fourth-background').css({ display: 'none' });
-        $('.stimulus-wrapper').css({ display: 'block' });
-        $('.circle-part-4').css({border : '1px solid black'});
-      }, 180000);
-
-       // 종료
-       setTimeout(() => {
-        $.ajax({
-            type: 'GET',
-            url: 'http://127.0.0.1:5000/fourth'
-        })
-        .then((res)=> console.log(res))
-        .catch((e)=> {
-          $('.circle-part-4').css({backgroundColor : 'blue'});
-        });
-        window.scrollTo(0, 0);
-        $('.alert-fourth-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'none' });
         $('.alert-final-background').css({ display: 'block' });
-        $('.draw-circle-wrapper').css({transform : 'rotate(-315deg)'});
-        $('.draw-circle-wrapper').css({transform : 'rotate(-315deg)'});
-      }, 210000);
+      }, 170000);
 
       // 종료 후 결과물 보여주기
       setTimeout(() => {
         window.scrollTo(0, 0);
-        $('.pallete-wrapper').css({ display: 'none' });
-        $('.stimulus-wrapper').css({ display: 'block' });
+        $('.stimulus-wrapper').css({ display: 'none' });
         $('.alert-final-background').css({ display: 'none' });
-        $('.mid-wrapper').css({backgroundImage : 'none'});
-      }, 215000);
-      // 215000
+      }, 180000);
     </script>
   </body>
 </html>

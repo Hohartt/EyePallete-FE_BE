@@ -16,8 +16,8 @@
   }
   .mid-wrapper {
     .pallete-wrapper {
-      padding: 4rem 4rem 0 11rem;
-      height: 30rem;
+      padding: 0 0 5rem 0;
+      // height: 30rem;
       display: flex;
       justify-content: space-between;
       .plus-box {
@@ -32,6 +32,7 @@
         // 13Hz
         background: red;
         width: 30rem;
+        height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0769230769230769s;
@@ -43,6 +44,7 @@
         // 19Hz
         background: green;
         width: 30rem;
+        height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0526315789473684s;
@@ -54,10 +56,10 @@
         // 23Hz
         background: blue;
         width: 30rem;
+        height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.032258064516129s;
-        // border-radius: 1000000px;
         @extend %flex;
         color: white;
       }
@@ -65,66 +67,16 @@
     .spring {
       display: block;
       width: 100%;
-      // height : 1rem;
       margin: auto;
+      opacity: 1;
     }
     .draw-area {
+      margin-top : 5rem; 
       width: 100%;
-      height: 100%;
-      margin-top: 7rem;
       display: flex;
       justify-content: center;
-      .draw-circle-wrapper {
-        width: 50rem;
-        height: 50rem;
-        border-radius: 100000px;
-        transform: rotate(45deg);
-        .first-line {
-          display: flex;
-          .circle-part-1 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eee;
-            border-radius: 100000px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-          }
-          .circle-part-2 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eeee;
-            border-radius: 100000px;
-            margin-left: 10px;
-            margin-bottom: 10px;
-          }
-        }
-        .second-line {
-          display: flex;
-          .circle-part-3 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eeee;
-            border-radius: 100000px;
-            margin-top: 10px;
-            margin-left: 10px;
-          }
-          .circle-part-4 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eeee;
-            border-radius: 100000px;
-            margin-right: 10px;
-            margin-top: 10px;
-          }
-        }
+      .result-img {
+        width: 60rem;
       }
     }
   }

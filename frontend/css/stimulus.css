@@ -1,4 +1,4 @@
-.stimulus-wrapper .mid-wrapper .pallete-wrapper .red, .stimulus-wrapper .mid-wrapper .pallete-wrapper .green, .stimulus-wrapper .mid-wrapper .pallete-wrapper .blue, .stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .first-line .circle-part-1, .stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .first-line .circle-part-2, .stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .second-line .circle-part-3, .stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .second-line .circle-part-4 {
+.stimulus-wrapper .mid-wrapper .pallete-wrapper .red, .stimulus-wrapper .mid-wrapper .pallete-wrapper .green, .stimulus-wrapper .mid-wrapper .pallete-wrapper .blue {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,8 +26,7 @@
 }
 
 .stimulus-wrapper .mid-wrapper .pallete-wrapper {
-  padding: 4rem 4rem 0 11rem;
-  height: 30rem;
+  padding: 0 0 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +54,7 @@
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .red {
   background: red;
   width: 30rem;
+  height: 30rem;
   -webkit-animation-name: box;
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
@@ -67,6 +67,7 @@
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .green {
   background: green;
   width: 30rem;
+  height: 30rem;
   -webkit-animation-name: box;
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
@@ -79,6 +80,7 @@
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .blue {
   background: blue;
   width: 30rem;
+  height: 30rem;
   -webkit-animation-name: box;
           animation-name: box;
   -webkit-animation-iteration-count: infinite;
@@ -92,12 +94,12 @@
   display: block;
   width: 100%;
   margin: auto;
+  opacity: 1;
 }
 
 .stimulus-wrapper .mid-wrapper .draw-area {
+  margin-top: 5rem;
   width: 100%;
-  height: 100%;
-  margin-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,68 +108,8 @@
           justify-content: center;
 }
 
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper {
-  width: 50rem;
-  height: 50rem;
-  border-radius: 100000px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .first-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .first-line .circle-part-1 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  width: 25rem;
-  height: 25rem;
-  border: 1px solid #eee;
-  border-radius: 100000px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .first-line .circle-part-2 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  width: 25rem;
-  height: 25rem;
-  border: 1px solid #eeee;
-  border-radius: 100000px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .second-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .second-line .circle-part-3 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  width: 25rem;
-  height: 25rem;
-  border: 1px solid #eeee;
-  border-radius: 100000px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.stimulus-wrapper .mid-wrapper .draw-area .draw-circle-wrapper .second-line .circle-part-4 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  width: 25rem;
-  height: 25rem;
-  border: 1px solid #eeee;
-  border-radius: 100000px;
-  margin-right: 10px;
-  margin-top: 10px;
+.stimulus-wrapper .mid-wrapper .draw-area .result-img {
+  width: 60rem;
 }
 
 .alert-background {
