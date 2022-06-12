@@ -17,22 +17,24 @@
           <img class="logo" src="./img/logo.png" alt="logo" />
         </div>
         <div class="mid-wrapper">
+        <div class="result-wrapper"></div>
         <div class="pallete-wrapper">
-          <div class="red"><p>7HZ</p></div>
+          <div class="red"><p></p></div>
           <div class="plus-box">
             <img src="./img/plus_2.png" width="100rem" />
           </div>
-          <div class="green"><p>13HZ</p></div>
+          <!-- <div class="green"><p></p></div> -->
           <div class="plus-box">
             <img src="./img/plus_2.png" width="100rem" />
           </div>
-          <div class="blue"><p>19HZ</p></div>
+          <div class="blue"><p></p></div>
         </div> 
         <img class="spring" src="./img/spring-result-2.PNG" alt="용수철" />
         <div class="draw-area">
           <img class="result-img" src="./img/first-result-car-sketch.PNG" alt="결과"/>
         </div>
        </div>
+       <div class="green"><p></p></div>
       </div>
 
       <div class="alert-background">
@@ -51,6 +53,7 @@
             30초간 응시해주세요😊
           </p>
           <img src="./img/loading/body.PNG"/>
+          <img src="./img/plus_2.png"/>
         </div>
       </div>
 
@@ -61,6 +64,7 @@
             30초간 응시해주세요😊
           </p>
           <img src="./img/loading/headlight.PNG"/>
+          <img src="./img/plus_2.png"/>
         </div>
       </div>
 
@@ -71,6 +75,7 @@
             30초간 응시해주세요😊
           </p>
           <img src="./img/loading/window.PNG"/>
+          <img src="./img/plus_2.png"/>
         </div>
       </div>
 
@@ -97,6 +102,7 @@
         $('.alert-second-background').css({ display: 'none' });
         $('.alert-third-background').css({ display: 'none' });
         $('.alert-final-background').css({ display: 'none' });
+        $('.result-wrapper').css({ display: 'none' });
       }, 0);
 
       setTimeout(() => {
@@ -107,7 +113,7 @@
         .then((res)=> console.log('연결 성공했냐?'))
         .catch();
         window.scrollTo(0, 0);
-      }, 1000);
+      }, 3000);
 
 
       // 첫번째 주파수 측정 (30초 동안)
@@ -126,7 +132,7 @@
         $('.alert-background').css({ display: 'none' });
         $('.alert-first-background').css({ display: 'block' });
         window.scrollTo(0, 0);
-      }, 50000);
+      }, 60000);
 
       // 첫번째 화면 띄움과 동시에 요청, 90초에 return
       setTimeout(() => {
@@ -136,8 +142,9 @@
         })
         .then((res)=> {
           console.log('첫번째',res); 
-          const temp = res.result;
           $(".result-img").attr("src", `./img/area-1/${res.result.flag_1}.jpg`);
+          first = res.result.flag_1.split('-')[1]; 
+          console.log(res.result.flag_1.split('-')[1], first); 
         })
         .catch((e)=> {
           console.log('첫 번째 영역 에러입니다.',e); 
@@ -145,14 +152,14 @@
         window.scrollTo(0, 0);
         $('.alert-first-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
-      }, 60000);
-
+      }, 70000);
+      // 70000
       // 90초 : 10초, 두번째 대기 화면
       setTimeout(() => {
         window.scrollTo(0, 0);
         $('.alert-second-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
-      }, 90000);
+      }, 100000);
 
       // 100초 : 두번째 측정화면 띄우면서 요청 보내기
       setTimeout(() => {
@@ -162,8 +169,9 @@
         })
         .then((res)=> {
           console.log('두번째', res);
-          const temp = res.result;
           $(".result-img").attr("src", `./img/area-2/${res.result.flag_2}.jpg`);
+          second = res.result.flag_2.split('-')[2];
+          console.log(second); 
         })
         .catch((e)=> {
           console.log('두 번째 영역 에러입니다.',e);
@@ -171,14 +179,14 @@
         window.scrollTo(0, 0);
         $('.alert-second-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
-      }, 100000);
+      }, 110000);
 
       // 130초 : 10초간 세번째 대기화면
       setTimeout(() => {
         window.scrollTo(0, 0);
         $('.alert-third-background').css({ display: 'block' });
         $('.stimulus-wrapper').css({ display: 'none' });
-      }, 130000);
+      }, 140000);
 
       // 140초 : 30초동안, 화면띄우고 요청 보내기
       setTimeout(() => {
@@ -188,8 +196,9 @@
         })
         .then((res)=> {
           console.log('세번째',res);
-          const temp = res.result;
           $(".result-img").attr("src", `./img/area-3/${res.result.flag_3}.jpg`);
+          third = res.result.flag_3.split('-')[3];
+          console.log(third);
         })
         .catch((e)=> {
           console.log('세 번째 영역 에러입니다.',e);
@@ -197,7 +206,7 @@
         window.scrollTo(0, 0);
         $('.stimulus-wrapper').css({ display: 'block' });
         $('.alert-third-background').css({ display: 'none' });
-      }, 140000);
+      }, 150000);
 
       // 종료 후 결과물 보여주기
       setTimeout(() => {

@@ -8,6 +8,18 @@
   z-index: 0;
   width: 100%;
   height: 100vh;
+  .green {
+    width: 30rem;
+    height: 30rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    background-color: black;
+    left: 45%;
+    animation-name: box;
+    animation-iteration-count: infinite;
+    animation-duration: 0.0526315789473684s;
+  }
   .header {
     width: 100%;
     .logo {
@@ -15,6 +27,13 @@
     }
   }
   .mid-wrapper {
+    .result-wrapper {
+      border-bottom: 1px solid black;
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
     .pallete-wrapper {
       padding: 0 0 5rem 0;
       // height: 30rem;
@@ -29,37 +48,46 @@
         }
       }
       .red {
-        // 7
-        background: red;
-        width: 30rem;
-        height: 30rem;
-        animation-name: box;
-        animation-iteration-count: infinite;
-        animation-duration: 0.1428571428571429s;
-        // border-radius: 100000px;
-        color: white;
-        @extend %flex;
-      }
-      .green {
         // 13
-        background: green;
+        background: black;
+        // background-image: url('../img/격자.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
         width: 30rem;
         height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0769230769230769s;
-        // border-radius: 1000000px;
-        @extend %flex;
+        // border-radius: 100000px;
         color: white;
+        @extend %flex;
       }
-      .blue {
+      .green {
         // 19
-        background: blue;
+        background: black;
+        // background-image: url('../img/격자.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
         width: 30rem;
         height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0526315789473684s;
+        // border-radius: 1000000px;
+        @extend %flex;
+        color: white;
+      }
+      .blue {
+        // 22
+        background: black;
+        // background-image: url('../img/격자.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        width: 30rem;
+        height: 30rem;
+        animation-name: box;
+        animation-iteration-count: infinite;
+        animation-duration: 0.0454545454545455s;
         @extend %flex;
         color: white;
       }
@@ -182,7 +210,10 @@
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
