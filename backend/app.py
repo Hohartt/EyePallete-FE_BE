@@ -38,7 +38,6 @@ def main():
     global idx_13hz
     global idx_19hz
     global idx_22hz
-
     # MAVE 녹화 시작 -> app.py와 동시에 실시간 라이브로 한줄씩 추가
     d = datetime.datetime.now()
     year = str(d.year)

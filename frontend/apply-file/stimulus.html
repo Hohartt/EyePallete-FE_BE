@@ -19,22 +19,30 @@
         <div class="mid-wrapper">
         <div class="result-wrapper"></div>
         <div class="pallete-wrapper">
-          <div class="red"><p></p></div>
+          <div>
+            <div class="red"></div>
+            <p style='text-align: center; font-size: 7rem; color : red'>R</p>
+          </div>
           <div class="plus-box">
             <img src="./img/plus_2.png" width="100rem" />
           </div>
-          <!-- <div class="green"><p></p></div> -->
+          <div>
+            <div class="green"><p></p></div>
+            <p style='text-align: center; font-size: 7rem; color : green'>G</p>
+          </div>
           <div class="plus-box">
             <img src="./img/plus_2.png" width="100rem" />
           </div>
-          <div class="blue"><p></p></div>
+          <div>
+            <div class="blue"><p></p></div>
+            <p style='text-align: center; font-size: 7rem; color : blue'>B</p>
+          </div>
         </div> 
         <img class="spring" src="./img/spring-result-2.PNG" alt="용수철" />
         <div class="draw-area">
           <img class="result-img" src="./img/first-result-car-sketch.PNG" alt="결과"/>
         </div>
        </div>
-       <div class="green"><p></p></div>
       </div>
 
       <div class="alert-background">
@@ -53,7 +61,7 @@
             30초간 응시해주세요😊
           </p>
           <img src="./img/loading/body.PNG"/>
-          <img src="./img/plus_2.png"/>
+          <img class='loading-plus' src="./img/plus_2.png"/>
         </div>
       </div>
 
@@ -64,7 +72,7 @@
             30초간 응시해주세요😊
           </p>
           <img src="./img/loading/headlight.PNG"/>
-          <img src="./img/plus_2.png"/>
+          <img class='loading-plus' src="./img/plus_2.png"/>
         </div>
       </div>
 
@@ -75,7 +83,7 @@
             30초간 응시해주세요😊
           </p>
           <img src="./img/loading/window.PNG"/>
-          <img src="./img/plus_2.png"/>
+          <img class='loading-plus' src="./img/plus_2.png"/>
         </div>
       </div>
 
@@ -126,6 +134,7 @@
         .catch((e)=> console.log('중립평균 에러', e));
         window.scrollTo(0, 0);
       }, 40000);
+//40000
 
       // 첫번째 영역 알림 (50초 이후 10초 동안)
       setTimeout(() => {
@@ -133,7 +142,7 @@
         $('.alert-first-background').css({ display: 'block' });
         window.scrollTo(0, 0);
       }, 60000);
-
+// 60000
       // 첫번째 화면 띄움과 동시에 요청, 90초에 return
       setTimeout(() => {
         $.ajax({
@@ -153,7 +162,6 @@
         $('.alert-first-background').css({ display: 'none' });
         $('.stimulus-wrapper').css({ display: 'block' });
       }, 70000);
-      // 70000
       // 90초 : 10초, 두번째 대기 화면
       setTimeout(() => {
         window.scrollTo(0, 0);

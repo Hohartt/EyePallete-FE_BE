@@ -8,18 +8,6 @@
   z-index: 0;
   width: 100%;
   height: 100vh;
-  .green {
-    width: 30rem;
-    height: 30rem;
-    position: fixed;
-    bottom: 0;
-    z-index: 10000;
-    background-color: black;
-    left: 45%;
-    animation-name: box;
-    animation-iteration-count: infinite;
-    animation-duration: 0.0526315789473684s;
-  }
   .header {
     width: 100%;
     .logo {
@@ -49,10 +37,9 @@
       }
       .red {
         // 13
-        background: black;
-        // background-image: url('../img/격자.jpg');
-        // background-repeat: no-repeat;
-        // background-size: cover;
+        background-image: url('../img/격자.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 30rem;
         height: 30rem;
         animation-name: box;
@@ -64,10 +51,9 @@
       }
       .green {
         // 19
-        background: black;
-        // background-image: url('../img/격자.jpg');
-        // background-repeat: no-repeat;
-        // background-size: cover;
+        background-image: url('../img/격자.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 30rem;
         height: 30rem;
         animation-name: box;
@@ -79,10 +65,9 @@
       }
       .blue {
         // 22
-        background: black;
-        // background-image: url('../img/격자.jpg');
-        // background-repeat: no-repeat;
-        // background-size: cover;
+        background-image: url('../img/격자.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 30rem;
         height: 30rem;
         animation-name: box;
@@ -144,6 +129,9 @@
     margin: auto;
     width: 50rem;
   }
+  .loading-plus {
+    width: 30rem;
+  }
 }
 
 .alert-second-background {
@@ -162,6 +150,9 @@
     margin: auto;
     width: 50rem;
   }
+  .loading-plus {
+    width: 30rem;
+  }
 }
 
 .alert-third-background {
@@ -178,6 +169,9 @@
   img {
     display: block;
     margin: auto;
+    width: 30rem;
+  }
+  .loading-plus {
     width: 30rem;
   }
 }
