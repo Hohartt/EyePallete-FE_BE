@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .red, .stimulus-wrapper .mid-wrapper .pallete-wrapper .green, .stimulus-wrapper .mid-wrapper .pallete-wrapper .blue {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,9 +61,7 @@
 }
 
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .red {
-  background-image: url("../img/격자.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
   width: 30rem;
   height: 30rem;
   -webkit-animation-name: box;
@@ -77,9 +74,7 @@
 }
 
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .green {
-  background-image: url("../img/격자.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
   width: 30rem;
   height: 30rem;
   -webkit-animation-name: box;
@@ -92,9 +87,7 @@
 }
 
 .stimulus-wrapper .mid-wrapper .pallete-wrapper .blue {
-  background-image: url("../img/격자.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
   width: 30rem;
   height: 30rem;
   -webkit-animation-name: box;
