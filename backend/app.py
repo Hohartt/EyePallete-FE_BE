@@ -43,7 +43,7 @@ def main():
     year = str(d.year)
     month = '0' + str(d.month)
     day = str(d.day)
-    noonOrnight = '오전' if d.hour <= 12 else '오후'
+    noonOrnight = '오전' if d.hour <= 11 else '오후'
     hour = str(d.hour) if d.hour <= 12 else str(d.hour - 12)
     minute = '0' + str(d.minute) if d.minute <= 9 else str(d.minute)  # 1~9분사이 폴더가 01, 02 분식으로 만들어짐
     k = year + '-' + month + '-' + day + '_' + noonOrnight + ' ' + hour + '_' + minute

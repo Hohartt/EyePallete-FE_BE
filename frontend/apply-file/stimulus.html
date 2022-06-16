@@ -98,10 +98,10 @@
 
     <script>
 
-      let first = '1-';
-      let second;
-      let third;
-      let color = ['Red', 'Green', 'Blue'];
+      // let first = '1-';
+      // let second;
+      // let third;
+      // let color = ['Red', 'Green', 'Blue'];
 
       // 중립 알림 시작 (50초 동안)
       setTimeout(() => {
@@ -153,7 +153,7 @@
         .then((res)=> {
           console.log('첫번째',res); 
           $(".result-img").attr("src", `./img/area-1/${res.result.flag_1}.jpg`);
-          first = res.result.flag_1;
+          // first = res.result.flag_1;
         })
         .catch((e)=> {
           first += color[Math.floor(Math.random() * color.length)];
@@ -181,10 +181,10 @@
         .then((res)=> {
           console.log('두번째', res);
           $(".result-img").attr("src", `./img/area-2/${res.result.flag_2}.jpg`);
-          second = res.result.flag_2;
+          // second = res.result.flag_2;
         })
         .catch((e)=> {
-          second = first + '-' + color[Math.floor(Math.random() * color.length)];
+          // second = first + '-' + color[Math.floor(Math.random() * color.length)];
           $(".result-img").attr("src", `./img/area-2/${second}.jpg`);
         });
         window.scrollTo(0, 0);
@@ -211,8 +211,8 @@
 
         })
         .catch((e)=> {
-          third = second + '-' + color[Math.floor(Math.random() * color.length)];
-          $(".result-img").attr("src", `./img/area-3/${third}.jpg`);
+          // third = second + '-' + color[Math.floor(Math.random() * color.length)];
+          // $(".result-img").attr("src", `./img/area-3/${third}.jpg`);
         });
         window.scrollTo(0, 0);
         $('.stimulus-wrapper').css({ display: 'block' });
