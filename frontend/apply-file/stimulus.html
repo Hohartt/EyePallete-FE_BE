@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./css/stimulus.css" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="all-wrapper">
+      <div class="stimulus-wrapper">
+        <div class="header">
+          <img class="logo" src="./img/logo.png" alt="logo" />
+        </div>
+        <div class="mid-wrapper">
+        <div class="result-wrapper"></div>
+        <div class="pallete-wrapper">
+          <div>
+            <div class="red"></div>
+            <p style='text-align: center; font-size: 7rem; color : red'>R</p>
+          </div>
+          <div class="plus-box">
+            <img src="./img/plus_2.png" width="100rem" />
+          </div>
+          <div>
+            <div class="green"><p></p></div>
+            <p style='text-align: center; font-size: 7rem; color : green'>G</p>
+          </div>
+          <div class="plus-box">
+            <img src="./img/plus_2.png" width="100rem" />
+          </div>
+          <div>
+            <div class="blue"><p></p></div>
+            <p style='text-align: center; font-size: 7rem; color : blue'>B</p>
+          </div>
+        </div> 
+        <img class="spring" src="./img/spring-result-2.PNG" alt="용수철" />
+        <div class="draw-area">
+          <img class="result-img" src="./img/first-result-car-sketch.PNG" alt="결과"/>
+        </div>
+       </div>
+      </div>
+
+      <div class="alert-background">
+        <div>
+          <p>
+            50초간 (+)에 집중해주세요😊
+          </p>
+          <img src="./img/plus_2.png"/>
+        </div>
+      </div>
+
+      <div class="alert-first-background">
+        <div>
+          <p>
+            자동차의 본체에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/loading/body.PNG"/>
+          <img class='loading-plus' src="./img/plus_2.png"/>
+        </div>
+      </div>
+
+      <div class="alert-second-background">
+        <div>
+          <p>
+            자동차의 헤드라이트에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/loading/headlight.PNG"/>
+          <img class='loading-plus' src="./img/plus_2.png"/>
+        </div>
+      </div>
+
+      <div class="alert-third-background">
+        <div>
+          <p>
+            자동차의 창문에 색칠하고자 하는 색을<br />
+            30초간 응시해주세요😊
+          </p>
+          <img src="./img/loading/window.PNG"/>
+          <img class='loading-plus' src="./img/plus_2.png"/>
+        </div>
+      </div>
+
+      <div class="alert-final-background">
+        <div>
+          <p>
+            측정이 완료되었습니다. </br>
+            본인의 그림을 확인해보세요😊
+          </p>
+        </div>
+    </div>
+
+    <script>
+
+      // let first = '1-';
+      // let second;
+      // let third;
+      // let color = ['Red', 'Green', 'Blue'];
+
+      // 중립 알림 시작 (50초 동안)
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.stimulus-wrapper').css({ display: 'none' });
+        $('.alert-first-background').css({ display: 'none' });
+        $('.alert-second-background').css({ display: 'none' });
+        $('.alert-third-background').css({ display: 'none' });
+        $('.alert-final-background').css({ display: 'none' });
+        $('.result-wrapper').css({ display: 'none' });
+      }, 0);
+
+      setTimeout(() => {
+        $.ajax({
+          type: 'GET',
+          url: 'http://127.0.0.1:5000/' //중립평균 서버내에서 자료 가지고 있게끔 요청
+        })
+        .then((res)=> console.log('연결 성공했냐?'))
+        .catch();
+        window.scrollTo(0, 0);
+      }, 3000);
+
+
+      // 첫번째 주파수 측정 (30초 동안)
+      setTimeout(() => {
+        $.ajax({
+          type: 'GET',
+          url: 'http://127.0.0.1:5000/mid_average' //중립평균 서버내에서 자료 가지고 있게끔 요청
+        })
+        .then((res)=> console.log('서버에서 온 중립평균 데이터입니다.', res.result))
+        .catch((e)=> console.log('중립평균 에러', e));
+        window.scrollTo(0, 0);
+      }, 40000);
+//40000
+
+      // 첫번째 영역 알림 (50초 이후 10초 동안)
+      setTimeout(() => {
+        $('.alert-background').css({ display: 'none' });
+        $('.alert-first-background').css({ display: 'block' });
+        window.scrollTo(0, 0);
+      }, 60000);
+// 60000
+      // 첫번째 화면 띄움과 동시에 요청, 90초에 return
+      setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/first'
+        })
+        .then((res)=> {
+          console.log('첫번째',res); 
+          $(".result-img").attr("src", `./img/area-1/${res.result.flag_1}.jpg`);
+          // first = res.result.flag_1;
+        })
+        .catch((e)=> {
+          first += color[Math.floor(Math.random() * color.length)];
+          $(".result-img").attr("src", `./img/area-1/${first}.jpg`);
+        });
+        window.scrollTo(0, 0);
+        $('.alert-first-background').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'block' });
+      }, 70000);
+//70000
+
+      // 90초 : 10초, 두번째 대기 화면
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.alert-second-background').css({ display: 'block' });
+        $('.stimulus-wrapper').css({ display: 'none' });
+      }, 100000);
+
+      // 100초 : 두번째 측정화면 띄우면서 요청 보내기
+      setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/second'
+        })
+        .then((res)=> {
+          console.log('두번째', res);
+          $(".result-img").attr("src", `./img/area-2/${res.result.flag_2}.jpg`);
+          // second = res.result.flag_2;
+        })
+        .catch((e)=> {
+          // second = first + '-' + color[Math.floor(Math.random() * color.length)];
+          $(".result-img").attr("src", `./img/area-2/${second}.jpg`);
+        });
+        window.scrollTo(0, 0);
+        $('.alert-second-background').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'block' });
+      }, 110000);
+
+      // 130초 : 10초간 세번째 대기화면
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.alert-third-background').css({ display: 'block' });
+        $('.stimulus-wrapper').css({ display: 'none' });
+      }, 140000);
+
+      // 140초 : 30초동안, 화면띄우고 요청 보내기
+      setTimeout(() => {
+        $.ajax({
+            type: 'GET',
+            url: 'http://127.0.0.1:5000/third'
+        })
+        .then((res)=> {
+          console.log('세번째',res);
+          $(".result-img").attr("src", `./img/area-3/${res.result.flag_3}.jpg`);
+
+        })
+        .catch((e)=> {
+          // third = second + '-' + color[Math.floor(Math.random() * color.length)];
+          // $(".result-img").attr("src", `./img/area-3/${third}.jpg`);
+        });
+        window.scrollTo(0, 0);
+        $('.stimulus-wrapper').css({ display: 'block' });
+        $('.alert-third-background').css({ display: 'none' });
+      }, 150000);
+
+      // 종료 후 결과물 보여주기
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        $('.stimulus-wrapper').css({ display: 'none' });
+        $('.alert-final-background').css({ display: 'block' });
+      }, 180000);
+
+      setTimeout(()=>{
+        $('.alert-final-background').css({ display: 'none' });
+        $('.stimulus-wrapper').css({ display: 'block' });
+        $('.pallete-wrapper').css({ display: 'none' });
+      }, 190000);
+    </script>
+  </body>
+</html>

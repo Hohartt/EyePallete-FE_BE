@@ -15,9 +15,16 @@
     }
   }
   .mid-wrapper {
+    .result-wrapper {
+      border-bottom: 1px solid black;
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
     .pallete-wrapper {
-      padding: 4rem 4rem 0 11rem;
-      height: 30rem;
+      padding: 0 0 5rem 0;
+      // height: 30rem;
       display: flex;
       justify-content: space-between;
       .plus-box {
@@ -29,9 +36,13 @@
         }
       }
       .red {
-        // 13Hz
-        background: red;
+        // 13
+        background-color: black;
+        // background-image: url('../img/격자.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
         width: 30rem;
+        height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0769230769230769s;
@@ -40,9 +51,13 @@
         @extend %flex;
       }
       .green {
-        // 19Hz
-        background: green;
+        // 19
+        background-color: black;
+        // background-image: url('../img/격자.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
         width: 30rem;
+        height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
         animation-duration: 0.0526315789473684s;
@@ -51,13 +66,16 @@
         color: white;
       }
       .blue {
-        // 23Hz
-        background: blue;
+        // 22
+        background-color: black;
+        // background-image: url('../img/격자.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
         width: 30rem;
+        height: 30rem;
         animation-name: box;
         animation-iteration-count: infinite;
-        animation-duration: 0.032258064516129s;
-        // border-radius: 1000000px;
+        animation-duration: 0.0454545454545455s;
         @extend %flex;
         color: white;
       }
@@ -65,66 +83,16 @@
     .spring {
       display: block;
       width: 100%;
-      // height : 1rem;
       margin: auto;
+      opacity: 1;
     }
     .draw-area {
+      margin-top: 5rem;
       width: 100%;
-      height: 100%;
-      margin-top: 7rem;
       display: flex;
       justify-content: center;
-      .draw-circle-wrapper {
-        width: 50rem;
-        height: 50rem;
-        border-radius: 100000px;
-        transform: rotate(45deg);
-        .first-line {
-          display: flex;
-          .circle-part-1 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eee;
-            border-radius: 100000px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-          }
-          .circle-part-2 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eeee;
-            border-radius: 100000px;
-            margin-left: 10px;
-            margin-bottom: 10px;
-          }
-        }
-        .second-line {
-          display: flex;
-          .circle-part-3 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eeee;
-            border-radius: 100000px;
-            margin-top: 10px;
-            margin-left: 10px;
-          }
-          .circle-part-4 {
-            @extend %flex;
-            transform: rotate(-45deg);
-            width: 25rem;
-            height: 25rem;
-            border: 1px solid #eeee;
-            border-radius: 100000px;
-            margin-right: 10px;
-            margin-top: 10px;
-          }
-        }
+      .result-img {
+        width: 60rem;
       }
     }
   }
@@ -142,11 +110,7 @@
     line-height: 200px;
   }
   img {
-    width: 30rem;
-    height: 30rem;
-    // animation-name: plus;
-    // animation-iteration-count: infinite;
-    // animation-duration: 1s;
+    width: 50rem;
   }
 }
 
@@ -164,11 +128,12 @@
     line-height: 200px;
   }
   img {
+    display: block;
+    margin: auto;
+    width: 50rem;
+  }
+  .loading-plus {
     width: 30rem;
-    height: 30rem;
-    // animation-name: plus;
-    // animation-iteration-count: infinite;
-    // animation-duration: 1s;
   }
 }
 
@@ -184,11 +149,12 @@
     line-height: 200px;
   }
   img {
+    display: block;
+    margin: auto;
+    width: 50rem;
+  }
+  .loading-plus {
     width: 30rem;
-    height: 30rem;
-    // animation-name: plus;
-    // animation-iteration-count: infinite;
-    // animation-duration: 1s;
   }
 }
 
@@ -204,31 +170,12 @@
     line-height: 200px;
   }
   img {
+    display: block;
+    margin: auto;
     width: 30rem;
-    height: 30rem;
-    animation-name: plus;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
   }
-}
-
-.alert-fourth-background {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  padding-top: 400px;
-  font-size: 5rem;
-  text-align: center;
-  p {
-    line-height: 200px;
-  }
-  img {
+  .loading-plus {
     width: 30rem;
-    height: 30rem;
-    animation-name: plus;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
   }
 }
 
@@ -260,7 +207,10 @@
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
